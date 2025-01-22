@@ -1,6 +1,8 @@
 //lista principal
 let listaNomes = [];
 
+// Lista temporária para sorteio sem repetição
+let listaSorteio = [];
 
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
@@ -28,6 +30,7 @@ function adicionarAmigo() {
             alert("Este nome já foi adicionado. Por favor, insira um novo nome!")
         } else {
             listaNomes.push(nome); //adiciona o nome à lista principal
+            listaSorteio.push(nome); //adiciona o nome à lista de sorteio
             atualizarListaNomes();
         }
     
@@ -51,14 +54,22 @@ function atualizarListaNomes() {
 
 // Função para sortear um amigo secreto sem repetir
 function sortearAmigo() {
+    //Valida se tem mais de 2 nomes na lista principal
     if (listaNomes.length < 2) {
         alert("Adicione pelo menos 02 nome antes de sortear.");
         return
+    } if (listaSorteio.length === 0) { //Valida se ainda existem nomes para sorteio
+        alert("Todos os amigos já foram sorteados! Reinicie a lista para um novo sorteio.")
     }
 
-    let indiceSorteado = Math.floor(Math.random() * listaNomes.length);
-    let amigoSorteado = listaNomes[indiceSorteado];
+    //Escolhe um índice aleatório na lista de Sorteio
+    let indiceSorteado = Math.floor(Math.random() * listaSorteio.length);
+    let amigoSorteado = listaSorteio[indiceSorteado];
 
+    //Remove o amigo sorteado da lista temporária
+    listaSorteio.splice(indiceSorteado, 1);
+
+    //Exibe o resultado na tela
     let resultadoHTML = document.querySelector('#resultado');
     resultadoHTML.innerHTML = `<li>O amigo secreto sorteado é: <strong>${amigoSorteado}</strong></li>`;
 }
