@@ -59,7 +59,7 @@ function sortearAmigo() {
         alert("Adicione pelo menos 02 nome antes de sortear.");
         return
     } if (listaSorteio.length === 0) { //Valida se ainda existem nomes para sorteio
-        alert("Todos os amigos já foram sorteados! A Lista será reiniciada para um novo sorteio.");
+        alert("Todos os amigos já foram sorteados! A lista será reiniciada para um novo sorteio.");
 
         //limpar as listas para reiniciar o processo
         listaNomes = [];
