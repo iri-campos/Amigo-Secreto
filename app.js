@@ -21,7 +21,7 @@ function adicionarAmigo() {
     let nome = document.querySelector('#amigo').value;
 
     //Expressão regular para validar nome (somente letras e espaços)
-    let regexNome = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
+    let regexNome = /^[A-Za-zÀ-Úà-úÇç\s]+$/;
 
     //Verifica se o nome corresponde ao padrão esperado. regexNome.test(nome): Verifica se o nome segue o padrão correto. nome.trim() !== "": Garante que o nome não está vazio ou com espaços em branco.
     if (regexNome.test(nome) && nome.trim() !== "") {
