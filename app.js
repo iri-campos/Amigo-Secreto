@@ -31,13 +31,13 @@ function adicionarAmigo() {
         } else {
             listaNomes.push(nome); //adiciona o nome à lista principal
             listaSorteio.push(nome); //adiciona o nome à lista de sorteio
-            atualizarListaNomes();
+            atualizarListaNomes(); //Aualiza a lista na tela
+            nome.value = ''; //limpa o campo de input após adicionar à lista
         }
     
     } else {
         alert("Por favor, insira um nome válido.")
     }
-    limparCampo();
 }
 
 // Função para atualizar a lista exibida na tela
@@ -84,10 +84,4 @@ function sortearAmigo() {
     //Exibe o resultado na tela
     let resultadoHTML = document.querySelector('#resultado');
     resultadoHTML.innerHTML = `<li>O amigo secreto sorteado é: <strong>${amigoSorteado}</strong></li>`;
-}
-
-//Limpa o campo após inserir o nome à lista
-function limparCampo() {
-    nome = document.querySelector('input');
-    nome.value = '';
 }
