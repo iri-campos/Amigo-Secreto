@@ -28,11 +28,12 @@
 
 Este projeto consiste em um jogo interativo de **Amigo Secreto**, onde os usuários podem adicionar os nomes dos amigos e sortear quem ficará com quem. O jogo permite que você adicione amigos, faça sorteios e visualize os resultados de forma dinâmica.
 
-🎯 Principais funcionalidades:
-1. Adicionar amigos ao jogo;
-2. Sortear aleatoriamente os amigos secretos;
-3. Exibir quem será o amigo secreto de cada pessoa;
-4. Interface amigável e dinâmica.
+🎯 Funcionalidades:
+1. Adicionar nomes: Os usuários escreverão o nome de um amigo em um campo de texto e o adicionarão a uma lista visível ao clicar em "Adicionar";
+2. Validar entrada: Se o valor informado estiver com caracteres especiais e/ou números ou se o campo de texto estiver vazio, o programa exibirá um alerta solicitando um nome válido; 
+3. Visualizar a lista: Os nomes inseridos aparecerão em uma lista abaixo do campo de entrada;
+4. Sorteio aleatório: Ao clicar no botão "Sortear Amigo", um nome da lista será selecionado aleatoriamente e exibido na página;
+5. Reiniciar o programa: Quando todos os nomes da lista forem sorteados, ela será reiniciada automaticamente.
 &nbsp;  
 &nbsp;
 
